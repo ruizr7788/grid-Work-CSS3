@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Grid layout</title>
+    <link rel="stylesheet" href="grid.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <p class="greeting">Log in to get started</p>
+      <form class="login">
+        <input
+          type="text"
+          placeholder="user"
+          class="login_input login_input--user"
+        />
+        <input
+          type="password"
+          placeholder="PIN"
+          class="login_input login_input--pin"
+        />
+        <button class="login_button">&rarr;</button>
+      </form>
+    </div>
+    <div class="main">
+      <!-- BALANCE -->
+      <div class="balance">
+        <div>
+          <p class="balance_label">Current balance</p>
+          <p>As of <span>08/04/2021, 16:17</span></p>
+        </div>
+        <p class="balance_value">$25,000</p>
+      </div>
+
+      <!-- MOVEMENTS -->
+      <div class="movements">
+        <div class="movements_row">
+          <div class="movements_type movements_type--deposit">10 deposit</div>
+          <div class="movements_date">Today</div>
+          <div class="movements_value">$&nbsp;20</div>
+        </div>
+        <div class="movements_row">
+          <div class="movements_type movements_type--withdrawl">
+            10 withdrawl
+          </div>
+          <div class="movements_date">Today</div>
+          <div class="movements_value">$&nbsp;-40</div>
+        </div>
+      </div>
+
+      <!-- SUMMARY -->
+      <div class="summary">
+        <p class="summary_label">In</p>
+        <p class="summary_value summary_label--in">$&nbsp;25,000</p>
+        <p class="summary_label">Out</p>
+        <p class="summary_value summary_label--out">$&nbsp;5,000</p>
+        <p class="summary_label">Interersts</p>
+        <p class="summary_value summary_label--interest">$&nbsp;500.00</p>
+        <button class="btn--sort">↓ SORT</button>
+      </div>
+
+      <!-- Operation: Transfers -->
+      <div class="operation operation--transfer">
+        <h2>Transfer money</h2>
+        <form class="form form--transfer">
+          <input type="text" class="form_input form_input--to" />
+          <input type="number" class="form_input form_input--amount" />
+          <button class="form_btn form_btn--transfer">→</button>
+          <label class="form_label">Transfer to</label>
+          <label class="form_label">Amount</label>
+        </form>
+      </div>
+
+      <!-- Operation: request loan -->
+      <div class="operation operation--loan">
+        <h2>Request loan</h2>
+        <form class="form form--loan">
+          <input type="number" class="form_input form_input--loan-amount" />
+          <button class="form_btn form_btn--loan">→</button>
+          <label class="form_label">Amount</label>
+        </form>
+      </div>
+
+      <!-- Operation: close account -->
+      <div class="operation operation--close">
+        <h2>Close account</h2>
+        <form class="form form--close">
+          <input type="text" class="form_input form_input--close" />
+          <input
+            type="password"
+            maxlength="6"
+            class="form_input form_input--pin"
+          />
+          <button class="form_btn form_btn--close">→</button>
+          <label class="form_label">Confirm user</label>
+          <label class="form_label">Confirm PIN</label>
+        </form>
+      </div>
+
+      <!-- Lougout Timer -->
+      <p class="logout-timer">
+        You will be logged out in <span class="timer">08:00</span>
+      </p>
+    </div>
+  </body>
+</html>
